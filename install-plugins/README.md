@@ -4,8 +4,8 @@ After installing jenkins_docker, I looked for an option to import plugins list
 from local Jenkins to jenkins_docker server.
 
 With help of ChatGPT and Claudie,
-I got a file plugins-to-install.txt with plugin names from CLI from my local Jenkins,
-java -jar jenkins-cli.jar -s http://localhost:8080/ -auth admin:admin list-plugins | awk '{print $1 ":" $NF}' > plugins-to-install.txt
+I got a file plugins-list.txt with plugin names from CLI from my local Jenkins,
+java -jar jenkins-cli.jar -s http://localhost:8080/ -auth admin:admin list-plugins | awk '{print $1 ":" $NF}' > plugins-list.txt
 Then I created install-plugins.sh.
 To run:
 - clone repo

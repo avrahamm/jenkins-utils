@@ -21,7 +21,7 @@ do
         output=$(java -jar "$JENKINS_CLI" -s "$JENKINS_URL" -auth "$JENKINS_AUTH" install-plugin "$plugin" -deploy 2>&1 < /dev/null)
         echo "$output"
     fi
-done < "$OPTIMIZED_PLUGINS_FILE"
+done < "$PLUGINS_LIST_FILE"
 
 echo "Finished processing all plugins"
 
